@@ -10,27 +10,58 @@ I kursen DB2022 på IT-Högskolan skulle vi redovisa på färdigheter i SQL, Nor
 ## Entity Relationship Diagram
 
 ```mermaid
+```mermaid
+
 erDiagram
-    Student ||--|{ StudentSchool : enrolls
-    School ||--|{ StudentSchool : accepts
+    Student ||--o{ Phone : has
+    Student }|--o| Grade : has
+    Student ||--o{ StudentSchool : attends
+    School ||--o{ StudentSchool : enrolls
+    Student ||--o{ StudentHobby : has
+    Hobby ||--o{ StudentHobby : involves
+    
+    
+    Student {
+        int StudentId
+        string Name
+        int GradeId
+    }
+    
+    Phone {
+        int PhoneId
+        int StudentId
+        tinyint IsHome 
+        tinyint IsJob
+        tinyint IsMobile
+        string number
+    }
+    
+    School {
+        int SchoolId
+        string name
+        string City
+    }
     
     StudentSchool {
         int StudentId
         int SchoolId
     }
     
-    Student {
+    Hobby {
+        int HobbyId
+        string name
+    }
+    StudentHobby {
         int StudentId
-        string FirstName
-        string LastName
+        int HobbyId
     }
     
-    School {
-        int SchoolId
-        string Name
-        string City
+    Grade {
+        int GradeId
+        string name
     }
     
+```
 ```
 
 ## Cardinality
