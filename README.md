@@ -10,8 +10,6 @@ I kursen DB2022 på IT-Högskolan skulle vi redovisa på färdigheter i SQL, Nor
 ## Entity Relationship Diagram
 
 ```mermaid
-```mermaid
-
 erDiagram
     Student ||--o{ Phone : has
     Student }|--o| Grade : has
@@ -61,7 +59,6 @@ erDiagram
         string name
     }
     
-```
 ```
 
 ## Cardinality
