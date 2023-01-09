@@ -61,6 +61,16 @@ erDiagram
     
 ```
 
-## Cardinality
+## Normalisera databas
 
-![Cardinality](cardinality-1.png)
+```bash
+docker ....
+```
+
+## Köra java kod
+
+```bash
+gradle run
+gradle check
+gradle bootRun
+```
