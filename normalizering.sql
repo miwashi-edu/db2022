@@ -23,6 +23,8 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
+/* Normalisera Student */
+
 DROP TABLE IF EXISTS Student;
 
 CREATE TABLE Student (
@@ -36,4 +38,6 @@ INSERT INTO Student (ID, FirstName, LastName)
 SELECT DISTINCT Id, SUBSTRING_INDEX(Name, ' ', 1), SUBSTRING_INDEX(Name, ' ', -1) 
 FROM UNF;
 
+/* Normalisera School */
 
+/* Normalsiera Phones */
